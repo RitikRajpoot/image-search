@@ -1,9 +1,10 @@
+import type { Dispatch, SetStateAction } from "react";
 import { SearchInput } from "./searchInput";
 import { Tags } from "./tags";
 
 type SearchBarProps = {
   searchKey: string;
-  setSearchKey: () => void;
+  setSearchKey: Dispatch<SetStateAction<string>>;
   className: string
   onSearch: ()=> void;
 }

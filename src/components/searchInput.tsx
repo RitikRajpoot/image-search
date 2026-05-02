@@ -1,4 +1,14 @@
-export function SearchInput({searchKey, setSearchKey, className, onSearch}) {
+import type { Dispatch, SetStateAction } from "react";
+
+type SearchInputProps = {
+  searchKey: string;
+  setSearchKey: Dispatch<SetStateAction<string>>;
+  onSearch: (item:string) => void;
+  className: string;
+}
+
+export function SearchInput({searchKey, setSearchKey, className, onSearch}: SearchInputProps) {
+
 
   const handleKeyPress = (e: any) => {
     if (e.key === 'Enter') {

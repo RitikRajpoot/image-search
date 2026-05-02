@@ -1,7 +1,8 @@
+import type { Dispatch, SetStateAction } from "react";
 import { SearchInput } from "./searchInput";
 type HeaderProps = {
   searchKey: string;
-  setSearchKey: (key: string) => void;
+  setSearchKey: Dispatch<SetStateAction<string>>;
   onSearch: (key: string) => void;
   showSearch: boolean
 }

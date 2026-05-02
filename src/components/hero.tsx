@@ -1,8 +1,9 @@
+import type { Dispatch, SetStateAction } from "react";
 import { SearchBar } from "./searchBar";
 
 type HeroProps = {
   searchKey: string;
-  setSearchKey: ()=>void;
+  setSearchKey: Dispatch<SetStateAction<string>>;
   onSearch: ()=> void;
 }
 export function Hero(props:HeroProps) {
